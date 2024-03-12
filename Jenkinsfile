@@ -15,7 +15,9 @@ pipeline {
 
         stage('build') {
             steps {
-                echo 'Hello World'
+                sh '''
+                echo '$NAME'
+                '''
             }
         }
 
