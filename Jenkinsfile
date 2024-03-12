@@ -26,8 +26,9 @@ pipeline {
         stage('verify') {
             steps {
                 sh '''
-                APP=CANARY
-                echo $APP
+                app=canary
+                echo $app
+                '''
             }
         }
 
