@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    environment {
+     NAME = "FRITZ"
+     COUNTRY = "CAMEROON"
+    }
+
 
 
 
@@ -10,21 +15,27 @@ pipeline {
 
         stage('buid') {
             steps {
-                echo 'Hello World'
+                sh '''
+                echo '$NAME'
+                '''
             }
         }
 
 
         stage('verify') {
             steps {
-                echo 'Hello World'
+                sh ''
+                echo '$NAME'
+                ,,,
             }
         }
 
 
         stage('deploy') {
             steps {
-                echo 'Hello World'
+                sh '''
+                echo '$NAME'
+                '''
             }
         }
 
