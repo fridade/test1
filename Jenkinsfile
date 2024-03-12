@@ -24,7 +24,7 @@ pipeline {
 
         stage('verify') {
             steps {
-                sh ''
+                sh '''
                 echo '$NAME'
                 ,,,
             }
