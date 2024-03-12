@@ -16,7 +16,7 @@ pipeline {
         stage('build') {
             steps {
                 sh '''
-                echo $NAME
+                echo $NAME           // there is no var exchange within stages
                 echo $COUNTRY       // this is call in  stage variable and this var cant be print else where
                 '''
             }
@@ -35,7 +35,13 @@ pipeline {
 
         stage('deploy') {
             steps {
-                echo 'Hello World'
+                sh '''
+                echo $NODE_NAME
+                echo $NODE_LABELS
+                echo $WORKSPACE
+                echo $JENKINS_HOME
+                echo $JENKINS_URL
+                '''
             }
         }
 
