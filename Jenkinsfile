@@ -13,29 +13,23 @@ pipeline {
 
 
 
-        stage('buid') {
+        stage('build') {
             steps {
-                sh '''
-                echo '$NAME'
-                '''
+                echo 'Hello World'
             }
         }
 
 
         stage('verify') {
             steps {
-                sh '''
-                echo '$NAME'
-                ,,,
+                echo 'Hello World'
             }
         }
 
 
         stage('deploy') {
             steps {
-                sh '''
-                echo '$NAME'
-                '''
+                echo 'Hello World'
             }
         }
 
@@ -55,6 +49,7 @@ pipeline {
 
 
     }
+
 
 
 
