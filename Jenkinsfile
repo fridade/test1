@@ -17,7 +17,7 @@ pipeline {
             steps {
                 sh '''
                 echo $NAME
-                echo $COUNTRY
+                echo $COUNTRY       // this is call in  stage variable and this var cant be print else where
                 '''
             }
         }
