@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-     NAME = "FRITZ"
+     NAME = "FRITZ"           // GLOBAL VARIABLE CAN BE USE AT ALL THE STAGES
      COUNTRY = "CAMEROON"
     }
 
@@ -17,6 +17,7 @@ pipeline {
             steps {
                 sh '''
                 echo '$NAME'
+                echo '$COUNTRY'
                 '''
             }
         }
