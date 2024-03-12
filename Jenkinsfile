@@ -16,8 +16,8 @@ pipeline {
         stage('build') {
             steps {
                 sh '''
-                echo '$NAME'
-                echo '$COUNTRY'
+                echo $NAME
+                echo $COUNTRY
                 '''
             }
         }
